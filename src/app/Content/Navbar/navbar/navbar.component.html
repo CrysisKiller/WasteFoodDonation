@@ -1,0 +1,93 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    [class.disabled]="loading"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a
+        mat-list-item
+        [routerLink]="loading ? null : '/apphome/hunger'"
+        [class.disabled]="loading"
+        class="list"
+      >
+        <span class="list">Home</span>
+      </a>
+    
+      <a
+        mat-list-item
+        [routerLink]="loading ? null : '/apphome/receiver'"
+        [class.disabled]="loading"
+        class="list"
+      >
+        <span class="list">Receive</span>
+      </a>
+    
+      <a
+        mat-list-item
+        [routerLink]="loading ? null : '/apphome/donor'"
+        [class.disabled]="loading"
+        class="list"
+      >
+        <span class="list">Donate</span>
+      </a>
+    </mat-nav-list>
+    
+  </mat-sidenav>
+
+  <mat-sidenav-content [class.disabled]="loading">
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        [disabled]="loading"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Food For Hunger</span>
+
+      <span class="example-spacer"></span>
+      <button
+        mat-icon-button
+        class="left"
+        color="secondary"
+        [matMenuTriggerFor]="BrightnessMenu"
+        [disabled]="loading"
+      >
+        <mat-icon *ngIf="light">brightness_5</mat-icon>
+        <mat-icon *ngIf="dark">brightness_3</mat-icon>
+      </button>
+      <mat-menu #BrightnessMenu="matMenu">
+        <button mat-menu-item (click)="setTheme('Light')">
+          <mat-icon>brightness_5</mat-icon>
+          <span>Light</span>
+        </button>
+        <button mat-menu-item (click)="setTheme('Dark')">
+          <mat-icon>brightness_3</mat-icon> Dark
+        </button>
+      </mat-menu>
+
+      <button
+        mat-icon-button
+        color="secondary"
+        [matMenuTriggerFor]="menu"
+        [disabled]="loading"
+      >
+        <i class="fa-solid fa-user"></i>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="Logout()">
+          <mat-icon>exit_to_app</mat-icon> Logout
+        </button>
+      </mat-menu>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

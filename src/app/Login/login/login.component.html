@@ -1,0 +1,54 @@
+<app-header></app-header>
+<form [formGroup]="loginForm" (ngSubmit)="Login()">
+  <div class="container">
+    <div class="left-container"></div>
+    <div class="right-container">
+      <div class="form-content">
+        <div class="segment">
+          <h1>Sign In</h1>
+        </div>
+        <label style="margin-bottom: 24px">
+          <input
+            type="text"
+            matInput
+            placeholder="Username"
+            id="Username"
+            name="Username"
+            formControlName="Username"
+          />
+        </label>
+
+        <label class="inputForm" style="margin-bottom: 10px">
+          <input
+            class="input"
+            matInput
+            formControlName="Password"
+            placeholder="Enter your Password"
+            [type]="hide ? 'password' : 'text'"
+          />
+          <button
+            type="button"
+            mat-icon-button
+            (click)="togglePasswordVisibility()"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </label>
+        @if(loginForm.get('Password')?.touched &&
+        (loginForm.get('Password')?.hasError('pattern') ||
+        loginForm.get('Password')?.hasError('required'))){
+        <mat-error class="error"> Please Enter a valid password</mat-error>
+        }
+        <br />
+        <button class="red" type="submit"><i class="fa-solid fa-lock"></i> Sign in</button>
+        <br /><br />
+        <p class="p">
+          Don't have an account?
+          <a class="span" routerLink="/register">Sign Up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</form>

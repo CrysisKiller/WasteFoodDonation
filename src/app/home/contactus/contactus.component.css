@@ -1,0 +1,41 @@
+.img{
+    background-image: url("/assets/Contact.jpg");
+    height: 500px; /* Adjust height as needed */
+    background-size: cover; /* Ensure the image covers the div */
+    text-align: center;
+}
+.example-form {
+    min-width: 200px;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .Form-field{
+    width: 100%;
+  }
+  
+
+span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: 500;
+    text-decoration: underline rgb(3, 199, 3);
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ p{
+    font-weight: bolder;
+}
+  

@@ -1,0 +1,46 @@
+<div class="loading-overlay" *ngIf="loading">
+  <div class="loading-message">
+    <p>Please wait</p>
+    <div class="dots-container">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</div>
+
+<div [class.disabled]="loading" class="container">
+  <mat-tab-group>
+    <mat-tab label="Accept Requests">
+      <div class="grid-container">
+        <div class="grid-item" *ngFor="let item of requestsArray$ | async" >
+          <!-- Your existing content here -->
+          <div>
+            <p>
+              <strong>Donor Name: {{ item.address.createdBy }}</strong>
+            </p>
+            <p>
+              <strong>Food Type: {{ item.foodType }}</strong>
+            </p>
+          </div>
+
+          <div class="date-container">
+            <p class="date">
+              <strong> Expires in: {{ getRemainingTime(item.expDate) }}</strong>
+            </p>
+          </div>
+          <button type="button" class="btn btn-success" (click)="Accept(item)" >Accept</button>
+          <button type="button" class="btn btn-success" (click)="View(item)" style="margin-left: 5px;">Details</button>
+
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+
+
+
+

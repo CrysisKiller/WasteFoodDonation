@@ -1,0 +1,44 @@
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+/* Theme Variables */
+:root {
+  --primary-color: #ffffff;
+  --background-color: #d7e9f6; /* Light Theme: Slightly darker than #ebf4fc */
+  --text-color: #000000;
+  --border-color: rgb(95, 95, 95);
+  --hover-color: #c5ddeb;
+}
+
+body.light-theme {
+  --primary-color: #ffffff;
+  --background-color: #d7e9f6; /* Light Theme */
+  --text-color: #000000;
+  --border-color: rgb(161, 161, 161);
+  --hover-color: #c5ddeb;
+}
+
+body.dark-theme {
+  --primary-color: #1b2b3a;
+  --background-color: #344a5e; /* Dark Theme: Darker blue instead of pure black */
+  --text-color: #ffffff;
+  --border-color: #50585d;
+  --hover-color: #2c3b4c;
+}
+
+/* Apply the theme variables to the global HTML and body elements */
+html, body {
+  height: 100%;
+  background: var(--background-color);
+  margin: 0;
+  color: var(--text-color);
+}
+
+/* Sidenav container to adapt to themes */
+.sidenav-container {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-right: 1px solid var(--border-color);
+}

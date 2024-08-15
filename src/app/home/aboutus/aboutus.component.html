@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="about-us-container">
+  
+    <div class="content">
+      <h2>"Welcome to Food Donate"</h2>
+      <div class="about-section">
+        <p>
+          We are a team of passionate individuals committed to addressing the issue of food waste in
+          India. Our goal is to create a system that connects food donors with charities and NGOs,
+          while also reducing the environmental impact of food waste.
+        </p>
+      </div>
+  
+      <div class="demo-section">
+        <h3>View Demo</h3>
+        <div class="video-container">
+          <div class="video-overlay" (click)="playVideo()">
+            <button class="play-button">&#9658;</button>
+          </div>
+          <video
+            #videoPlayer
+            [src]="videoUrl"
+            controls
+            (click)="togglePlay($event)"
+            (ended)="onVideoEnd()"
+          ></video>
+        </div>
+      </div>
+    </div>
+
+
+
+    <nav>
+        <ul class="nav-menu">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/about">About</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+            <li><a routerLink="/login">Login</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <p class="footer-text">Food For Hunger © 2023</p>
+    </footer>
+
+    
+
+
+  </div>
+  
+
+
+

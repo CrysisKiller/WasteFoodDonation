@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.form-content {
+  background-color: rgba(
+    235,
+    236,
+    240,
+    0.9
+  ); /* Slightly transparent for better visibility */
+  padding: 16px;
+  width: 320px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative; /* Make sure it stays above the blurred background */
+  z-index: 1;
+}
+
+.segment {
+  padding: 32px 0;
+  text-align: center;
+  color: #626262;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+label {
+  display: block;
+  width: 100%;
+}
+
+.password-label {
+  position: relative;
+}
+input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 320px;
+  border: 0;
+  outline: 0;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+input:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 320px;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #61677c;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+button:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+button .icon {
+  margin-right: 8px;
+}
+
+button.red {
+  color: #ae1100;
+}
+
+.inputForm {
+  display: flex;
+  position: relative;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+button[mat-icon-button] {
+  position: absolute;
+  right: 1px;
+  top: 3px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+.error {
+  color: #ae1100;
+  font-weight: 600;
+}

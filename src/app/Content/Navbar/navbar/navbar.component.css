@@ -1,0 +1,51 @@
+ .sidenav-container {
+  height: 100%;
+  background: var(--background-color);
+}
+.sidenav {
+  width: 200px;
+  background: var(--primary-color);
+
+  border-right:1px solid var(--border-color) ;
+}
+.sidenav .mat-toolbar {
+  background:  var(--primary-color);
+
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color) ;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background:  var(--primary-color);
+  color:var(--text-color);
+  border-bottom: 1px solid var(--border-color) ;
+}
+
+.list {
+  color: var(--text-color) !important;
+}
+
+.list:hover {
+  background: var(--hover-color) !important; 
+}
+
+
+.left{
+  margin-right: 15px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+.sidenav .disabled{
+  color: rgba(0, 0, 0, 0.38); /* Optional: Make the links appear inactive */
+  cursor: not-allowed;        /* Optional: Change cursor to indicate non-clickable */
+}

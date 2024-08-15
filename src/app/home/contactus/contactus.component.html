@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="img"></div>
+
+<br><br>
+
+    <span> Contact Us </span>
+    <br><br>
+
+<div class="form">
+    <form class="example-form" [formGroup]="contactus">
+        <mat-form-field class="Form-field">
+            <mat-label> Name </mat-label> 
+            <input type="text" name="" id="name" matInput formControlName="name">       
+        </mat-form-field> <br>
+
+        <mat-form-field class="Form-field">
+            <mat-label>Email </mat-label> 
+            <input type="email" name="" id="email" matInput formControlName="email">       
+        </mat-form-field><br>
+
+        <mat-form-field class="Form-field">
+            <mat-label> Message </mat-label> 
+            <input type="text" name="" id="name" matInput formControlName="message">       
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" (click)="sendMail()">Send</button>
+
+    </form>
+</div>
+<br><br>
+<div class="content">
+    <div >
+        <p>Email:sudhamshuh1ga21cs155&#64;gmail.com</p> 
+        <p>phone : 555-555-5555</p> 
+        <p> Address : Address: 123 Main St, Anytown</p>
+    </div>
+
+</div>
+
