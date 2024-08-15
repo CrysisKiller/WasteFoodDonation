@@ -1,22 +1,18 @@
-/* Center align the content in the dialog */
 mat-dialog-content {
     padding: 20px;
   }
   
-  /* Add some spacing between the title and content */
   mat-dialog-title {
     font-size: 1.5em;
     margin-bottom: 10px;
     text-align: center;
   }
   
-  /* Style the content of the dialog */
   mat-dialog-content p {
     font-size: 1.1em;
     margin: 10px 0;
   }
   
-  /* Style the close button */
   mat-dialog-actions {
     display: flex;
     justify-content: center;

@@ -35,7 +35,6 @@ export class ReceiverComponent {
   private readonly authService = inject(AuthService);
   loading = false;
   private dialog = inject(MatDialog);
-  // loading$ = this.portfolioService.loading$;
 
   requestsArray$ = this.donorService.requests$;
   timers: { Id: number; targetTime: Date; remainingTime: string }[] = [];

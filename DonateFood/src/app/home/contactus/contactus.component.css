@@ -1,5 +1,5 @@
 .img{
-    background-image: url("/assets/Contact.jpg");
+    background-image: url("/assets/images/Contact.jpg");
     height: 500px; /* Adjust height as needed */
     background-size: cover; /* Ensure the image covers the div */
     text-align: center;

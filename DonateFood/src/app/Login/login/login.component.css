@@ -2,8 +2,6 @@
   box-sizing: border-box;
 }
 
-
-
 .container {
   display: flex;
   width: 100vw;
@@ -12,13 +10,13 @@
 
 .left-container {
   flex: 1;
-  background: url("/assets/coverimage.jpg") no-repeat center center;
+  background: url("/assets/images/coverimage.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .right-container {
   flex: 1;
-  background: url("/assets/right-background.jpg") no-repeat center center;
+  background: url("/assets/images/right-background.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
   justify-content: center;

@@ -1,5 +1,5 @@
 .img {
-    background-image: url("/assets/coverimage.jpg");
+    background-image: url("/assets/images/coverimage.jpg");
     height: 80vh; /* Adjust height as needed */
     background-size: cover; /* Ensure the image covers the div */
     background-position: center; /* Center the image */

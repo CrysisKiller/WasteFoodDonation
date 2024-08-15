@@ -16,7 +16,6 @@
     <mat-tab label="Accept Requests">
       <div class="grid-container">
         <div class="grid-item" *ngFor="let item of requestsArray$ | async" >
-          <!-- Your existing content here -->
           <div>
             <p>
               <strong>Donor Name: {{ item.address.createdBy }}</strong>
