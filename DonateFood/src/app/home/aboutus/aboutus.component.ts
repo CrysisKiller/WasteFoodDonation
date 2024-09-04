@@ -13,7 +13,7 @@ export class AboutusComponent {
 
   @ViewChild('videoPlayer', { static: false }) videoPlayer!: ElementRef;
 
-  videoUrl: string = 'assets/Videos/demo.mp4'; // Replace with your video file path
+  videoUrl: string = 'assets/Videos/demo.mp4'; 
 
   playVideo(): void {
     const video: HTMLVideoElement = this.videoPlayer.nativeElement;
